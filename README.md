@@ -1,5 +1,5 @@
 
-# nodes_simulating_multi-threading_demo
+# nodes_simulating_multi-thread_demo
 
 Understanding Processes and Threads. Before you start writing CPU-bound tasks and offloading them into separate threads, you first need to understand what processes and threads are and the differences between them. Most importantly, you will review how processes and threads run on a single or multi-core computer system.
 ## Content
