@@ -19,6 +19,22 @@ A: 2000
 A: 4000
 The number 7754 is a process ID that the operating system has assigned to it.
 
+to show how many threads has inside de process: ps -M 7754
+
+resut:
+USER         PID   TT   %CPU STAT PRI     STIME     UTIME COMMAND
+pablocurty  7754 s002   98.3 R    31T   0:00.20   0:20.09 node process.js A
+            7754         0.0 S    31T   0:00.00   0:00.00 
+            7754         0.1 S    31T   0:00.02   0:00.00 
+            7754         0.1 S    31T   0:00.02   0:00.00 
+            7754         0.1 S    31T   0:00.02   0:00.00 
+            7754         0.1 S    31T   0:00.02   0:00.00 
+            7754         0.0 S    31T   0:00.00   0:00.00 
+
+As you can see from the output, the Node.js process has seven threads in total: 
+one main thread for executing JavaScript, four Node.js threads, and two V8 threads.
+
+
 stop all currently running Node processes with the command kill: sudo kill -9 `pgrep node` 
 
 RUN FOUR PROCESSES
